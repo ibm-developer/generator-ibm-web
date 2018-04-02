@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# 1.0.0 (2018-04-02)
+
+
+### Features
+
+* refactoring templates ([3b50a29](https://github.com/ibm-developer/generator-web/commit/3b50a29))
+
+
+### BREAKING CHANGES
+
+* refactoring templates
+
+
+
 <a name="0.3.7"></a>
 ## [0.3.7](https://github.ibm.com/arf/generator-web/compare/v0.3.6...v0.3.7) (2018-01-18)
 

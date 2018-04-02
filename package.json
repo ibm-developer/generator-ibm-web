@@ -1,6 +1,6 @@
 {
   "name": "generator-web",
-  "version": "0.3.7",
+  "version": "1.0.0",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "main": "index.js",
   "files": [
