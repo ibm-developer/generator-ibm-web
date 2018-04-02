@@ -1,5 +1,5 @@
 {
-  "name": "@arf/generator-web",
+  "name": "generator-web",
   "version": "0.3.7",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "main": "index.js",
@@ -18,7 +18,8 @@
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "lint": "eslint .",
-    "mocha": "nyc mocha",
+    "mocha": "nyc --reporter=lcov mocha --recursive -R xunit-file",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "version": "standard-version"
   },
   "devDependencies": {
@@ -27,11 +28,11 @@
     "fs-extra": "^2.1.2",
     "jshint": "^2.9.4",
     "mocha": "^3.2.0",
-    "nyc": "^10.1.2",
+    "nyc": "^10.3.0",
+    "xunit-file": "^1.0.0",
     "standard-version": "^4.2.0",
     "yeoman-assert": "^2.2.2",
     "yeoman-test": "^1.7.0"
   },
-  "repository": "https://github.ibm.com/arf/generator-web",
-  "license": "MIT"
+  "repository": "https://github.com/ibm-developer/generator-web"
 }
