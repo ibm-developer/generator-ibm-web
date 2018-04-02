@@ -1,8 +1,21 @@
-# Web Starter Yeoman Generator [![Build Status](https://travis.ibm.com/arf/generator-web.svg?token=ePBWPJTgR2KYCeTsit1a&branch=master)](https://travis.ibm.com/arf/generator-web) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+# IBM Web Generator 
 
-# 
+[img-bluemix-powered]: https://img.shields.io/badge/bluemix-powered-blue.svg
+[url-bluemix]: http://bluemix.net
+<!-- [url-npm]: https://www.npmjs.com/package/generator-ibm-web
+[img-license]: https://img.shields.io/npm/l/generator-ibm-web.svg
+[img-version]: https://img.shields.io/npm/v/generator-ibm-web.svg
+[img-npm-downloads-monthly]: https://img.shields.io/npm/dm/generator-ibm-web.svg
+[img-npm-downloads-total]: https://img.shields.io/npm/dt/generator-ibm-web.svg
 
-Creates web project sources in an existing project directory adding boilerplate code for modern web development.
+[img-travis-master]: https://travis-ci.org/ibm-developer/generator-ibm-web.svg?branch=master
+[url-travis-master]: https://travis-ci.org/ibm-developer/generator-ibm-web/branches
+
+[img-coveralls-master]: https://coveralls.io/repos/github/ibm-developer/generator-ibm-web/badge.svg
+[url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web -->
+
+[img-codacy]: https://api.codacy.com/project/badge/Grade/a5893a4622094dc8920c8a372a8d3588?branch=master
+<!-- [url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web -->
 
 ## Getting Started with a generated project
 

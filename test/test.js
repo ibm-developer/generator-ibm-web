@@ -40,33 +40,29 @@ let bluemixSettings = {
 
 let requiredFilesForBasic = [
 	'public/index.html',
-	'public/js/bundle.js',
-	'public/css/default.css'
+	'public/404.html',
+	'public/500.html'
 ];
 
 let requiredFilesForAngular = [
 	'client/app.js',
 	'client/component.html',
 	'client/index.html',
-	'test/test-server.js',
+	'client/404.html',
+	'client/500.html',
+	'client/default.css',
 	'webpack.common.js',
 	'webpack.dev-proxy.js',
 	'webpack.dev-standalone.js',
 	'webpack.prod.js',
 ];
 
-let requiredFilesForWebpack = [
-	'public/index.html',
-	'src/client/app/index.jsx',
-	'src/client/sass/default.scss',
-	'webpack.config.js'
-];
-
 let requiredFilesForReact = [
 	'client/index.html',
 	'client/app/App.jsx',
 	'client/default.scss',
-	'test/test-server.js',
+	'client/index.jsx',
+	'test-server.js',
 	'webpack.common.js',
 	'webpack.dev-proxy.js',
 	'webpack.dev-standalone.js',
@@ -108,63 +104,6 @@ describe('Web project generator', function () {
 		// });
 
 
-	});
-
-	describe('Webpack app with NodeJS', function () {
-
-		beforeEach(function () {
-
-			bluemixSettings.backendPlatform = "NODE";
-
-			return helpers.run(path.join(__dirname, '../generators/app'))
-				.inTmpDir(function (dir) {
-					fs.copySync(path.join(__dirname, 'resources/package.json'), path.join(dir, 'package.json'));
-					fs.copySync(path.join(__dirname, 'resources/Dockerfile'), path.join(dir, 'Dockerfile'));
-					fs.copySync(path.join(__dirname, 'resources/manifest.yml'), path.join(dir, 'manifest.yml'));
-				})
-				.withOptions({
-					bluemix: JSON.stringify(bluemixSettings),
-					framework: "Webpack"
-				});
-		});
-
-		it('required files created', function () {
-
-			assert.file(requiredFilesForWebpack);
-
-		});
-
-		it('contains original dependencies', function () {
-
-			assert.fileContent('package.json', 'appmetrics-dash');
-			assert.fileContent('package.json', 'express');
-
-		});
-
-		it('contains new dependencies', function () {
-
-			assert.fileContent('package.json', 'webpack');
-			assert.fileContent('package.json', 'babel');
-
-		});
-
-		it('does not have React', function () {
-			assert.noFileContent('package.json', 'react');
-			assert.noFileContent('package.json', 'react-dom');
-		});
-
-		it('starter writes NodeJS', function () {
-			assert.fileContent('src/client/app/index.jsx', 'You are currently running a NodeJS server.');
-		});
-
-		it('should modify Dockerfile', function () {
-			assert.fileContent('Dockerfile', 'npm run build;');
-		});
-
-		it('should modify manifest.yml', function () {
-			assert.fileContent('manifest.yml', 'npm prune --production');
-			assert.fileContent('manifest.yml', 'NPM_CONFIG_PRODUCTION');
-		})
 	});
 
 	describe('React app with NodeJS', function () {
