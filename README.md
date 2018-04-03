@@ -1,7 +1,7 @@
 # IBM Web Generator 
 
 
-[![IBM Cloud powered][img-bluemix-powered]][url-bluemix]
+[![IBM Cloud powered][img-ibmcloud-powered]][url-cloud]
 [![Travis][img-travis-master]][url-travis-master]
 [![Coveralls][img-coveralls-master]][url-coveralls-master]
 [![Codacy][img-codacy]][url-codacy]
@@ -11,8 +11,9 @@
 [![License][img-license]][url-npm]
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-[img-bluemix-powered]: https://img.shields.io/badge/bluemix-powered-blue.svg
-[url-bluemix]: http://bluemix.net
+[img-ibmcloud-powered]: https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg
+[url-cloud]: http://bluemix.net
+
 [url-npm]: https://www.npmjs.com/package/generator-ibm-web
 [img-license]: https://img.shields.io/npm/l/generator-ibm-web.svg
 [img-version]: https://img.shields.io/npm/v/generator-ibm-web.svg
