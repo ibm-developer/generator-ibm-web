@@ -2,7 +2,7 @@
 
 [img-bluemix-powered]: https://img.shields.io/badge/bluemix-powered-blue.svg
 [url-bluemix]: http://bluemix.net
-<!-- [url-npm]: https://www.npmjs.com/package/generator-ibm-web
+[url-npm]: https://www.npmjs.com/package/generator-ibm-web
 [img-license]: https://img.shields.io/npm/l/generator-ibm-web.svg
 [img-version]: https://img.shields.io/npm/v/generator-ibm-web.svg
 [img-npm-downloads-monthly]: https://img.shields.io/npm/dm/generator-ibm-web.svg
@@ -12,10 +12,10 @@
 [url-travis-master]: https://travis-ci.org/ibm-developer/generator-ibm-web/branches
 
 [img-coveralls-master]: https://coveralls.io/repos/github/ibm-developer/generator-ibm-web/badge.svg
-[url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web -->
+[url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web
 
 [img-codacy]: https://api.codacy.com/project/badge/Grade/a5893a4622094dc8920c8a372a8d3588?branch=master
-<!-- [url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web -->
+[url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web
 
 ## Getting Started with a generated project
 
@@ -25,8 +25,6 @@
 1. Select your chosen framework: None, Angular or React
 
 1. Select your chosen language: Swift, Node, Java, Python-Flask or Python-Django
-  
-1. Open `public/index.html` in your browser
 
 ## Frameworks
 
@@ -56,18 +54,22 @@ It is important that the web server is registered to serve files in the `public`
 
 Web sources for React projects are stored in the `client` directory:
 
-- `client/index.html` and `client/index.jsx` - Landing page sources
-- `client/404.html` and `client/404.jsx` (and corresponding 500 page sources) - Error page sources
+- `client/index.html` - Landing page source
+- `client/index.jsx` - Landing page source
+- `client/app/App.jsx` - Component injected into landing page body
+- `client/404.html` and `client/500.html` - Error page sources
 - `client/default.css` - minimized stylesheet with inline encoded images
 
 ## AngularJS
 
 Web sources for AngularJS projects are stored in the `client` directory:
 
-- `client/index.html` and `client/component.html` - Landing page sources
-- `client/404.html` and `client/500.html` - Error pages sources
-- `client/default.css` - minimized stylesheet with inline encoded images
+- `client/index.html` - Landing page source 
+- `client/component.html` - Landing page source
 - `client/app.js` - Angular app initialization, config and routing
+- `client/404.html` and `client/500.html` - Error page sources
+- `client/default.css` - minimized stylesheet with inline encoded images
+
 
 
 ## Publishing Changes
