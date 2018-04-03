@@ -14,8 +14,8 @@
 [img-coveralls-master]: https://coveralls.io/repos/github/ibm-developer/generator-ibm-web/badge.svg
 [url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web
 
-[img-codacy]: https://api.codacy.com/project/badge/Grade/a5893a4622094dc8920c8a372a8d3588?branch=master
-[url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/de3305c225024fe5b551d9f8fee3b587)](https://www.codacy.com/app/jkingoliver/generator-ibm-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-developer/generator-ibm-web&amp;utm_campaign=Badge_Grade)
+
 
 ## Getting Started with a generated project
 
