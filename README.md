@@ -1,5 +1,16 @@
 # IBM Web Generator 
 
+
+[![IBM Cloud powered][img-bluemix-powered]][url-bluemix]
+[![Travis][img-travis-master]][url-travis-master]
+[![Coveralls][img-coveralls-master]][url-coveralls-master]
+[![Codacy][img-codacy]][url-codacy]
+[![Version][img-version]][url-npm]
+[![DownloadsMonthly][img-npm-downloads-monthly]][url-npm]
+[![DownloadsTotal][img-npm-downloads-total]][url-npm]
+[![License][img-license]][url-npm]
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 [img-bluemix-powered]: https://img.shields.io/badge/bluemix-powered-blue.svg
 [url-bluemix]: http://bluemix.net
 [url-npm]: https://www.npmjs.com/package/generator-ibm-web
@@ -14,7 +25,10 @@
 [img-coveralls-master]: https://coveralls.io/repos/github/ibm-developer/generator-ibm-web/badge.svg
 [url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/de3305c225024fe5b551d9f8fee3b587)](https://www.codacy.com/app/jkingoliver/generator-ibm-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-developer/generator-ibm-web&amp;utm_campaign=Badge_Grade)
+
+[img-codacy]: https://api.codacy.com/project/badge/Grade/de3305c225024fe5b551d9f8fee3b587?branch=master
+[url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web
+
 
 
 ## Getting Started with a generated project
