@@ -1,7 +1,19 @@
 # IBM Web Generator 
 
-[img-bluemix-powered]: https://img.shields.io/badge/bluemix-powered-blue.svg
-[url-bluemix]: http://bluemix.net
+
+[![IBM Cloud powered][img-ibmcloud-powered]][url-cloud]
+[![Travis][img-travis-master]][url-travis-master]
+[![Coveralls][img-coveralls-master]][url-coveralls-master]
+[![Codacy][img-codacy]][url-codacy]
+[![Version][img-version]][url-npm]
+[![DownloadsMonthly][img-npm-downloads-monthly]][url-npm]
+[![DownloadsTotal][img-npm-downloads-total]][url-npm]
+[![License][img-license]][url-npm]
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+[img-ibmcloud-powered]: https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg
+[url-cloud]: http://bluemix.net
+
 [url-npm]: https://www.npmjs.com/package/generator-ibm-web
 [img-license]: https://img.shields.io/npm/l/generator-ibm-web.svg
 [img-version]: https://img.shields.io/npm/v/generator-ibm-web.svg
@@ -14,8 +26,11 @@
 [img-coveralls-master]: https://coveralls.io/repos/github/ibm-developer/generator-ibm-web/badge.svg
 [url-coveralls-master]: https://coveralls.io/github/ibm-developer/generator-ibm-web
 
-[img-codacy]: https://api.codacy.com/project/badge/Grade/a5893a4622094dc8920c8a372a8d3588?branch=master
+
+[img-codacy]: https://api.codacy.com/project/badge/Grade/de3305c225024fe5b551d9f8fee3b587?branch=master
 [url-codacy]: https://www.codacy.com/app/ibm-developer/generator-ibm-web
+
+
 
 ## Getting Started with a generated project
 
@@ -80,5 +95,5 @@ Make sure to follow the [conventional commit specification](https://conventional
 
 Once you are finished with your changes, run `npm test` to make sure all tests pass.
 
-Do a pull request against `master`, make sure the build passes. A team member will review and merge your pull request.
-Once merged to `master` an auto generated pull request will be created against master to update the changelog. Make sure that the CHANGELOG.md and the package.json is correct before merging the pull request. After the auto generated pull request has been merged to `master` the version will be bumped and published to Artifactory.
+Do a pull request against `master`, make suGjjjre the build passes. A team member will review and merge your pull request.
+Once merged to `master` an auto generated pull request will be created against master to update the changelog. Make sure that the CHANGELOG.md and the package.json is correct before merging the pull request. After the auto generated pull request has been merged to `master` the version will be bumped and published to npm.
