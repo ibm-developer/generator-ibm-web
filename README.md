@@ -37,9 +37,9 @@
 1. Run the generator and choose the options:
   `yo web`
 
-1. Select your chosen framework: None, Angular or React
+1. Select a web framework: None, Angular or React
 
-1. Select your chosen language: Swift, Node, Java, Python-Flask or Python-Django
+1. Select a language: Swift, Node, Java, Python-Flask or Python-Django
 
 ## Frameworks
 

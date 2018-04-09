@@ -11,7 +11,7 @@
  limitations under the License.
  */
 
- 'use strict';
+'use strict';
 const Generator = require('yeoman-generator');
 const yamlParser = require('yaml-parser');
 const dep = require('./templates/dependencies.json');
@@ -105,7 +105,8 @@ module.exports = class extends Generator {
 				this._generateAngularJS();
 				break;
 			default:
-				throw 'Unknown generator type';
+				this._generateBasic();
+				break;
 		}
 	}
 

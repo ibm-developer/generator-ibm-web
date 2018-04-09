@@ -48,8 +48,8 @@ let requiredFilesForAngular = [
 	'client/app.js',
 	'client/component.html',
 	'client/index.html',
-	'client/404.html',
-	'client/500.html',
+	'public/404.html',
+	'public/500.html',
 	'client/default.css',
 	'webpack.common.js',
 	'webpack.dev-proxy.js',
@@ -60,9 +60,11 @@ let requiredFilesForAngular = [
 let requiredFilesForReact = [
 	'client/index.html',
 	'client/app/App.jsx',
-	'client/default.scss',
+	'client/default.css',
 	'client/index.jsx',
-	'test-server.js',
+	'client/404.html',
+	'client/500.html',
+	'test/test-server.js',
 	'webpack.common.js',
 	'webpack.dev-proxy.js',
 	'webpack.dev-standalone.js',
@@ -87,21 +89,15 @@ describe('Web project generator', function () {
 				});
 		});
 
-		it('does not contain web pages', function () {
+		it('contains web pages', function () {
 
-			assert.noFile(requiredFilesForBasic);
+			assert.file(requiredFilesForBasic);
 
 		});
 
-		it('does not contains web sources', function () {
-			assert.noFile(['src/client/index.html',
-				'src/client/sass/default.scss'
-			]);
+		it('starter text appears', function () {
+			assert.fileContent('public/index.html', 'You are currently running a Node.js app built for the IBM Cloud')
 		});
-
-		// it('starter text appears', function () {
-		// 	assert.fileContent('public/index.html', 'You are currently running a NodeJS server.')
-		// });
 
 
 	});
@@ -141,8 +137,6 @@ describe('Web project generator', function () {
 
 			assert.fileContent('package.json', 'webpack');
 			assert.fileContent('package.json', 'babel');
-
-			// assert.fileContent('package.json', 'webpack-dev-server');
 
 		});
 
