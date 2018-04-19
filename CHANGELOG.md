@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* add tests; default to basic ([beda593](https://github.com/ibm-developer/generator-ibm-web/commit/beda593))
 * add tests; default to basic ([#4](https://github.com/ibm-developer/generator-ibm-web/issues/4)) ([f881b6d](https://github.com/ibm-developer/generator-ibm-web/commit/f881b6d))
 
 
