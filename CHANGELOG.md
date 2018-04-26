@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/ibm-developer/generator-ibm-web/compare/v1.0.3...v1.0.5) (2018-04-26)
+
+
+### Bug Fixes
+
+* rename loaders per webpack4 ([#11](https://github.com/ibm-developer/generator-ibm-web/issues/11)) ([ea2de7b](https://github.com/ibm-developer/generator-ibm-web/commit/ea2de7b))
+* webpack fix ([#13](https://github.com/ibm-developer/generator-ibm-web/issues/13)) ([692821d](https://github.com/ibm-developer/generator-ibm-web/commit/692821d))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/ibm-developer/generator-ibm-web/compare/v1.0.3...v1.0.4) (2018-04-26)
 
