@@ -23,12 +23,14 @@ const angularJsScripts = angularJsDep.scripts;
 
 const devDependencies = dep.devDependencies;
 const angularJsDevDependencies = angularJsDep.devDependencies;
+const defaultNodeVersion = "^6.9.0";
 
 module.exports = class extends Generator {
 	constructor(args, opts) {
 		super(args, opts);
 
 		this.framework = opts.framework;
+		this.nodeVersion = opts.nodeVersion;
 
 		if (typeof (opts.bluemix) === 'string') {
 			this.bluemix = JSON.parse(opts.bluemix || "{}");
@@ -81,6 +83,15 @@ module.exports = class extends Generator {
 					"DJANGO"
 				]
 			});
+
+			prompts.push({
+				type: 'input',
+				name: 'nodeVersion',
+				when: answers => answers.language === 'NODE',
+				message: 'Specify the verison of node that you wish to use.',
+				default: defaultNodeVersion 
+			});
+
 		}
 
 		return this.prompt(prompts).then(this._processAnswers.bind(this));
@@ -91,6 +102,7 @@ module.exports = class extends Generator {
 		this.bluemix.backendPlatform = answers.language || this.bluemix.backendPlatform;
 		this.framework = answers.framework || this.framework;
 		this.bluemix.name = answers.name || this.bluemix.name;
+		this.nodeVersion = answers.nodeVersion || this.nodeVersion;
 	}
 
 	write() {
@@ -159,6 +171,7 @@ module.exports = class extends Generator {
 			this.destinationPath('Procfile-dev'), {}
 		);
 
+
 		this.fs.copyTpl(
 			this.templatePath('react/babelrc'),
 			this.destinationPath('.babelrc'), {}
@@ -189,7 +202,8 @@ module.exports = class extends Generator {
 				this.templatePath('package.json'),
 				this.destinationPath('package.json'), {
 					applicationName: this.bluemix.name,
-					language: this.bluemix.backendPlatform
+					language: this.bluemix.backendPlatform,
+					nodeVersion: this.nodeVersion
 				}
 			);
 		}
@@ -237,7 +251,8 @@ module.exports = class extends Generator {
 				this.templatePath('package.json'),
 				this.destinationPath('package.json'), {
 					applicationName: this.bluemix.name,
-					language: this.bluemix.backendPlatform
+					language: this.bluemix.backendPlatform,
+					nodeVersion: this.nodeVersion
 				}
 			);
 		}
