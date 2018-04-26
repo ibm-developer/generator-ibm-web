@@ -34,7 +34,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   module : {
-    loaders : [
+    rules : [
       {
           test    : /\.jsx?$/,
           exclude : /node_modules/,

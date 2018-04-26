@@ -32,7 +32,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   module : {
-    loaders : [
+    rules : [
       {
         test: /\.js$/,
         loader: 'ng-annotate-loader'
