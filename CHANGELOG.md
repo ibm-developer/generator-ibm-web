@@ -6,12 +6,6 @@ All notable changes to this project will be documented in this file. See [standa
 # [1.1.0](https://github.com/ibm-developer/generator-ibm-web/compare/v1.0.3...v1.1.0) (2018-04-27)
 
 
-### Bug Fixes
-
-* rename loaders per webpack4 ([#11](https://github.com/ibm-developer/generator-ibm-web/issues/11)) ([ea2de7b](https://github.com/ibm-developer/generator-ibm-web/commit/ea2de7b))
-* webpack fix ([#13](https://github.com/ibm-developer/generator-ibm-web/issues/13)) ([692821d](https://github.com/ibm-developer/generator-ibm-web/commit/692821d))
-
-
 ### Features
 
 * support adding node version to engine in package.json ([f5b2494](https://github.com/ibm-developer/generator-ibm-web/commit/f5b2494))
@@ -24,9 +18,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* rename loaders per webpack4 ([#11](https://github.com/ibm-developer/generator-ibm-web/issues/11)) ([ea2de7b](https://github.com/ibm-developer/generator-ibm-web/commit/ea2de7b))
 * webpack fix ([#13](https://github.com/ibm-developer/generator-ibm-web/issues/13)) ([692821d](https://github.com/ibm-developer/generator-ibm-web/commit/692821d))
-
 
 
 <a name="1.0.4"></a>
@@ -53,22 +45,13 @@ All notable changes to this project will be documented in this file. See [standa
 ## [1.0.2](https://github.com/ibm-developer/generator-ibm-web/compare/v1.0.0...v1.0.2) (2018-04-16)
 
 
-### Bug Fixes
-
-* add tests; default to basic ([#4](https://github.com/ibm-developer/generator-ibm-web/issues/4)) ([f881b6d](https://github.com/ibm-developer/generator-ibm-web/commit/f881b6d))
-
-
-
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/ibm-developer/generator-ibm-web/compare/v1.0.0...v1.0.1) (2018-04-09)
 
 
 ### Bug Fixes
 
-* add tests; default to basic ([beda593](https://github.com/ibm-developer/generator-ibm-web/commit/beda593))
 * add tests; default to basic ([#4](https://github.com/ibm-developer/generator-ibm-web/issues/4)) ([f881b6d](https://github.com/ibm-developer/generator-ibm-web/commit/f881b6d))
-
-
 
 <a name="1.0.0"></a>
 # 1.0.0 (2018-04-02)
