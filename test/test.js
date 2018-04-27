@@ -163,6 +163,61 @@ describe('Web project generator', function () {
 
 			return helpers.run(path.join(__dirname, '../generators/app'))
 				.inTmpDir(function (dir) {
+					fs.copySync(path.join(__dirname, 'resources/package.json'), path.join(dir, 'package.json'));
+					fs.copySync(path.join(__dirname, 'resources/Dockerfile'), path.join(dir, 'Dockerfile'));
+					fs.copySync(path.join(__dirname, 'resources/manifest.yml'), path.join(dir, 'manifest.yml'));
+				})
+				.withOptions({
+					bluemix: JSON.stringify(bluemixSettings),
+					framework: "React",
+					nodeVersion: expectedNodeVersion
+				});
+		});
+
+		it('required files created', function () {
+
+			assert.file(requiredFilesForReact);
+
+		});
+
+		it(`should have package.json add node ${expectedNodeVersion} to engines`, function () {
+
+			assert.fileContent('package.json', 'appmetrics-dash');
+			assert.fileContent('package.json', 'express');
+			assert.jsonFileContent('package.json', { engines : { node : expectedNodeVersion } } );
+
+		});
+
+		it('contains Webpack', function () {
+
+			assert.fileContent('package.json', 'webpack');
+			assert.fileContent('package.json', 'babel');
+
+		});
+
+		it('contains React', function () {
+			assert.fileContent('package.json', 'react');
+			assert.fileContent('package.json', 'react-dom');
+			assert.fileContent('package.json', 'babel-preset-react');
+		});
+
+		it('should modify Dockerfile', function () {
+			assert.fileContent('Dockerfile', 'npm run build;');
+		});
+
+		it('should modify manifest.yml', function () {
+			assert.fileContent('manifest.yml', 'npm prune --production');
+			assert.fileContent('manifest.yml', 'NPM_CONFIG_PRODUCTION');
+		});
+	});
+	describe('React app with NodeJS using a defined node version with no present package.json', function () {
+
+		const expectedNodeVersion = '8.0.0';
+		beforeEach(function () {
+			bluemixSettings.backendPlatform = "NODE";
+
+			return helpers.run(path.join(__dirname, '../generators/app'))
+				.inTmpDir(function (dir) {
 					fs.copySync(path.join(__dirname, 'resources/Dockerfile'), path.join(dir, 'Dockerfile'));
 					fs.copySync(path.join(__dirname, 'resources/manifest.yml'), path.join(dir, 'manifest.yml'));
 				})
@@ -218,6 +273,7 @@ describe('Web project generator', function () {
 
 			return helpers.run(path.join(__dirname, '../generators/app'))
 				.inTmpDir(function (dir) {
+					fs.copySync(path.join(__dirname, 'resources/package.json'), path.join(dir, 'package.json'));
 					fs.copySync(path.join(__dirname, 'resources/Dockerfile'), path.join(dir, 'Dockerfile'));
 					fs.copySync(path.join(__dirname, 'resources/manifest.yml'), path.join(dir, 'manifest.yml'));
 				})
@@ -282,6 +338,56 @@ describe('Web project generator', function () {
 
 			assert.fileContent('package.json', 'appmetrics-dash');
 			assert.fileContent('package.json', 'express');
+
+		});
+
+
+		it('should modify Dockerfile', function () {
+			assert.fileContent('Dockerfile', 'npm run build;');
+		});
+
+		it('should modify manifest.yml', function () {
+			assert.fileContent('manifest.yml', 'npm prune --production');
+			assert.fileContent('manifest.yml', 'NPM_CONFIG_PRODUCTION');
+		});
+
+		it('should have react specific build script', function() {
+			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
+		})
+
+		it('should have original scripts and dependencies', function() {
+			assert.fileContent('package.json', 'mocha');
+			assert.fileContent('package.json', 'node --debug server/server.js');
+		});
+	});
+	
+	describe('AngularJS app with NodeJS using a defined node version and present existing files ', function () {
+		const expectedNodeVersion = '8.1.0';
+		beforeEach(function () {
+
+			bluemixSettings.backendPlatform = "NODE";
+
+			return helpers.run(path.join(__dirname, '../generators/app'))
+				.inTmpDir(function (dir) {
+					fs.copySync(path.join(__dirname, 'resources/Dockerfile'), path.join(dir, 'Dockerfile'));
+					fs.copySync(path.join(__dirname, 'resources/manifest.yml'), path.join(dir, 'manifest.yml'));
+				})
+				.withOptions({
+					bluemix: JSON.stringify(bluemixSettings),
+					framework: "AngularJS",
+					nodeVersion: expectedNodeVersion
+				});
+		});
+
+		it('required files created', function () {
+			assert.file(requiredFilesForAngular);
+		});
+
+		it('contains original dependencies', function () {
+
+			assert.fileContent('package.json', 'appmetrics-dash');
+			assert.fileContent('package.json', 'express');
+			assert.jsonFileContent('package.json', { engines : { node : expectedNodeVersion } } );
 
 		});
 
