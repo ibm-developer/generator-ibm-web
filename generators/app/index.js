@@ -309,11 +309,13 @@ module.exports = class extends Generator {
 		if (options !== undefined && options.react) {
 			packageFileJSON.scripts = Object.assign(packageFileJSON.scripts, reactDep.scripts);
 			packageFileJSON.devDependencies = Object.assign(packageFileJSON.devDependencies, reactDep.devDependencies);
+			packageFileJSON.engines = Object.assign(packageFileJSON.engines, {node : this.nodeVersion});
 		}
 
 		if (options !== undefined && options.angularjs) {
 			packageFileJSON.devDependencies = Object.assign(packageFileJSON.devDependencies, angularJsDevDependencies);
 			packageFileJSON.scripts = Object.assign(packageFileJSON.scripts, angularJsScripts);
+			packageFileJSON.engines = Object.assign(packageFileJSON.engines, {node : this.nodeVersion});
 		}
 
 		this.fs.writeJSON(this.destinationPath('package.json'), packageFileJSON, null, 4);
