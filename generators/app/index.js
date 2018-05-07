@@ -23,14 +23,14 @@ const angularJsScripts = angularJsDep.scripts;
 
 const devDependencies = dep.devDependencies;
 const angularJsDevDependencies = angularJsDep.devDependencies;
-const defaultNodeVersion = "^6.9.0";
+const defaultNodeVersion = "^8.11.0";
 
 module.exports = class extends Generator {
 	constructor(args, opts) {
 		super(args, opts);
 
 		this.framework = opts.framework;
-		this.nodeVersion = opts.nodeVersion;
+		this.nodeVersion = opts.nodeVersion || defaultNodeVersion; 
 
 		if (typeof (opts.bluemix) === 'string') {
 			this.bluemix = JSON.parse(opts.bluemix || "{}");
@@ -88,8 +88,7 @@ module.exports = class extends Generator {
 				type: 'input',
 				name: 'nodeVersion',
 				when: answers => answers.language === 'NODE',
-				message: 'Specify the verison of node that you wish to use.',
-				default: defaultNodeVersion 
+				message: 'Specify the verison of node that you wish to use.'
 			});
 
 		}
