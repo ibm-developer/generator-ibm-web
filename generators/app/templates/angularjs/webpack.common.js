@@ -15,36 +15,36 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './client/index.html',
-  filename: 'index.html',
-  inject: 'body'
+	template: './client/index.html',
+	filename: 'index.html',
+	inject: 'body'
 });
 
 const CopyWebpackPluginConfig= new CopyWebpackPlugin([{
-  from: './client/component.html',
-  to: path.resolve(__dirname, 'public', 'templates')
+	from: './client/component.html',
+	to: path.resolve(__dirname, 'public', 'templates')
 }]);
 
 module.exports = {
-  entry: './client/app.js',
-  output: {
-    filename: 'js/bundle.[hash].js',
-    path: path.resolve(__dirname, 'public')
-  },
-  module : {
-    rules : [
-      {
-        test: /\.js$/,
-        loader: 'ng-annotate-loader'
-      },
-      {
-        test    : /\.css?/,
-        loader  : 'style-loader!css-loader!sass-loader'
-      }
-    ]
-  },
-  plugins: [
-    HtmlWebpackPluginConfig,
-    CopyWebpackPluginConfig
-  ]
+	entry: './client/app.js',
+	output: {
+		filename: 'js/bundle.[hash].js',
+		path: path.resolve(__dirname, 'public')
+	},
+	module : {
+		rules : [
+			{
+				test: /\.js$/,
+				loader: 'ng-annotate-loader'
+			},
+			{
+				test    : /\.css?/,
+				loader  : 'style-loader!css-loader!sass-loader'
+			}
+		]
+	},
+	plugins: [
+		HtmlWebpackPluginConfig,
+		CopyWebpackPluginConfig
+	]
 };

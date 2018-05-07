@@ -17,6 +17,7 @@ let helpers = require('yeoman-test');
 let assert = require('yeoman-assert');
 let path = require('path');
 let fs = require('fs-extra');
+const defaultNodeVersion = '^8.11.0';
 
 let bluemixSettings = {
 	name: "MyTest",
@@ -99,7 +100,6 @@ describe('Web project generator', function () {
 			assert.fileContent('public/index.html', 'You are currently running a Node.js app built for the IBM Cloud')
 		});
 
-
 	});
 
 	describe('React app with NodeJS', function () {
@@ -140,6 +140,10 @@ describe('Web project generator', function () {
 
 		});
 
+		it(`should use ${defaultNodeVersion} for engine node version`, function() {
+			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
+		});
+
 		it('contains React', function () {
 			assert.fileContent('package.json', 'react');
 			assert.fileContent('package.json', 'react-dom');
@@ -176,14 +180,6 @@ describe('Web project generator', function () {
 		it('required files created', function () {
 
 			assert.file(requiredFilesForReact);
-
-		});
-
-		it(`should have package.json add node ${expectedNodeVersion} to engines`, function () {
-
-			assert.fileContent('package.json', 'appmetrics-dash');
-			assert.fileContent('package.json', 'express');
-			assert.jsonFileContent('package.json', { engines : { node : expectedNodeVersion } } );
 
 		});
 
@@ -231,14 +227,7 @@ describe('Web project generator', function () {
 		it('required files created', function () {
 			assert.file(requiredFilesForAngular);
 		});
-
-		it(`should have package.json add node ${expectedNodeVersion} to  engines`, function () {
-
-			assert.jsonFileContent('package.json', { engines : { node : expectedNodeVersion } } );
-
-		});
-
-
+		
 		it('should modify Dockerfile', function () {
 			assert.fileContent('Dockerfile', 'npm run build;');
 		});
@@ -299,6 +288,9 @@ describe('Web project generator', function () {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
 		})
 
+		it(`should use ${defaultNodeVersion} for engine node version`, function() {
+			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
+		});
 		it('should have original scripts and dependencies', function() {
 			assert.fileContent('package.json', 'mocha');
 			assert.fileContent('package.json', 'node --debug server/server.js');
@@ -328,6 +320,9 @@ describe('Web project generator', function () {
 
 		});
 
+		it(`should use ${defaultNodeVersion} for engine node version`, function() {
+			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
+		});
 
 		it('should not have Dockerfile', function () {
 			assert.noFile('Dockerfile')
@@ -347,3 +342,4 @@ describe('Web project generator', function () {
 		})
 	});
 });
+
