@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/ibm-developer/generator-ibm-web/compare/v1.1.1...v1.2.0) (2018-05-07)
+
+
+### Bug Fixes
+
+* **angularjs:** use 'mode' to set environment variable and use seperate plugin for Uglify ([fcc60df](https://github.com/ibm-developer/generator-ibm-web/commit/fcc60df))
+* **react:** use 'mode' to set environment variable and use seperate plugin for Uglify ([c395911](https://github.com/ibm-developer/generator-ibm-web/commit/c395911))
+
+
+### Features
+
+* use node 8 as default ([50343e2](https://github.com/ibm-developer/generator-ibm-web/commit/50343e2))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/ibm-developer/generator-ibm-web/compare/v1.1.0...v1.1.1) (2018-05-02)
 
