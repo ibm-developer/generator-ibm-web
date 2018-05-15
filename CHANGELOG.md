@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.4"></a>
+## [1.2.4](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.3...v1.2.4) (2018-05-15)
+
+
+### Bug Fixes
+
+* **babel:** use babel-preset-react to set the preset in webpack config ([9ca0e51](https://github.com/ibm-developer/generator-ibm-web/commit/9ca0e51))
+
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.2...v1.2.3) (2018-05-14)
 
