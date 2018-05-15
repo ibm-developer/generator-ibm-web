@@ -170,12 +170,6 @@ module.exports = class extends Generator {
 			this.destinationPath('Procfile-dev'), {}
 		);
 
-
-		this.fs.copyTpl(
-			this.templatePath('react/babelrc'),
-			this.destinationPath('.babelrc'), {}
-		);
-
 		this.fs.copyTpl(
 			this.templatePath('react/webpack.common.js'),
 			this.destinationPath('webpack.common.js'), {}
