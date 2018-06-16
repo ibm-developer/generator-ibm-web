@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "debug": "nf --procfile Procfile-debug --port 3000 start",
     "build": "webpack --progress --config webpack.prod.js",
     "client-reload": "webpack-dev-server --host 0.0.0.0  --history-api-fallback --progress --inline --config webpack.dev-standalone.js",
     "server-reload": "nodemon server/server.js",

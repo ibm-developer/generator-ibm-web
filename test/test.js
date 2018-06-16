@@ -66,6 +66,8 @@ let requiredFilesForReact = [
 	'client/404.html',
 	'client/500.html',
 	'test/test-server.js',
+	'Procfile-dev',
+	'Procfile-debug',
 	'webpack.common.js',
 	'webpack.dev-proxy.js',
 	'webpack.dev-standalone.js',
@@ -124,6 +126,11 @@ describe('Web project generator', function () {
 
 			assert.file(requiredFilesForReact);
 
+		});
+
+		it('should have the correct run scripts to debug and dev', function() {
+			assert.fileContent('package.json', '"dev": "nf --procfile Procfile-dev --port 3000 start"');
+			assert.fileContent('package.json', '"debug": "nf --procfile Procfile-debug --port 3000 start"');
 		});
 
 		it('contains original dependencies', function () {
@@ -224,6 +231,7 @@ describe('Web project generator', function () {
 				});
 		});
 
+
 		it('required files created', function () {
 			assert.file(requiredFilesForAngular);
 		});
@@ -237,13 +245,18 @@ describe('Web project generator', function () {
 			assert.fileContent('manifest.yml', 'NPM_CONFIG_PRODUCTION');
 		});
 
-		it('should have react specific build script', function() {
+		it('should have specific build script', function() {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
-		})
+		});
+
+		it('should have correct node scripts under dev and debug', function() {
+			assert.fileContent('package.json', '"dev": "npm-run-all --parallel client-reload-proxy server-reload"');
+			assert.fileContent('package.json', '"debug": "npm-run-all --parallel client-reload-proxy inspector"');
+		});
 
 		it('should have original scripts and dependencies', function() {
 			assert.fileContent('package.json', 'mocha');
-			assert.fileContent('package.json', 'node --debug server/server.js');
+			assert.fileContent('package.json', 'node --inspect server/server.js');
 		});
 	});
 	describe('AngularJS app with NodeJS and present existing files ', function () {
@@ -288,12 +301,17 @@ describe('Web project generator', function () {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
 		})
 
+		it('should have correct node scripts under dev and debug', function() {
+			assert.fileContent('package.json', '"dev": "npm-run-all --parallel client-reload-proxy server-reload"');
+			assert.fileContent('package.json', '"debug": "npm-run-all --parallel client-reload-proxy inspector"');
+		});
+
 		it(`should use ${defaultNodeVersion} for engine node version`, function() {
 			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
 		});
 		it('should have original scripts and dependencies', function() {
 			assert.fileContent('package.json', 'mocha');
-			assert.fileContent('package.json', 'node --debug server/server.js');
+			assert.fileContent('package.json', 'node --inspect server/server.js');
 		});
 	});
 
@@ -335,10 +353,15 @@ describe('Web project generator', function () {
 		it('should have react specific build script', function() {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
 		});
+      
+		it('should have correct node scripts under dev and debug', function() {
+			assert.fileContent('package.json', '"dev": "npm-run-all --parallel client-reload-proxy server-reload"');
+			assert.fileContent('package.json', '"debug": "npm-run-all --parallel client-reload-proxy inspector"');
+		});
 
 		it('should have original scripts and dependencies', function() {
 			assert.fileContent('package.json', 'mocha');
-			assert.fileContent('package.json', 'node --debug server/server.js');
+			assert.fileContent('package.json', 'node --inspect server/server.js');
 		})
 	});
 });

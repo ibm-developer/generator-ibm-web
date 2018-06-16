@@ -171,6 +171,12 @@ module.exports = class extends Generator {
 		);
 
 		this.fs.copyTpl(
+			this.templatePath('react/Procfile-debug'),
+			this.destinationPath('Procfile-debug'), {}
+		);
+
+
+		this.fs.copyTpl(
 			this.templatePath('react/webpack.common.js'),
 			this.destinationPath('webpack.common.js'), {}
 		);
