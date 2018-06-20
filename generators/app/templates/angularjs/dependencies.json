@@ -4,7 +4,7 @@
     "client-reload": "webpack-dev-server --host 0.0.0.0 --history-api-fallback --progress --inline --config webpack.dev-standalone.js",
     "client-reload-proxy": "webpack-dev-server --host 0.0.0.0 --history-api-fallback --inline --config webpack.dev-proxy.js",
     "server-reload": "nodemon server/server.js",
-    "inpsector": "node --inspect server/server.js",
+    "inpsector": "node --inspect=0.0.0.0:9229 server/server.js",
     "dev": "npm-run-all --parallel client-reload-proxy server-reload",
     "debug": "npm-run-all --parallel client-reload-proxy inspector"
   },
