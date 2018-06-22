@@ -13,7 +13,6 @@
 
 'use strict';
 const Generator = require('yeoman-generator');
-const yamlParser = require('yaml-parser');
 const dep = require('./templates/dependencies.json');
 const reactDep = require('./templates/react/dependencies.json');
 const angularJsDep = require('./templates/angularjs/dependencies.json');
@@ -171,6 +170,12 @@ module.exports = class extends Generator {
 		);
 
 		this.fs.copyTpl(
+			this.templatePath('react/Procfile-debug'),
+			this.destinationPath('Procfile-debug'), {}
+		);
+
+
+		this.fs.copyTpl(
 			this.templatePath('react/webpack.common.js'),
 			this.destinationPath('webpack.common.js'), {}
 		);
@@ -208,7 +213,6 @@ module.exports = class extends Generator {
 			this.destinationPath('client'), {}
 		);
 
-		this._rewriteBuild();
 	}
 
 	_generateAngularJS() {
@@ -279,7 +283,6 @@ module.exports = class extends Generator {
 			this.destinationPath('public/500.html'), {}
 		);
 
-		this._rewriteBuild();
 	}
 
 	_augmentPackageJSON(options) {
@@ -312,36 +315,5 @@ module.exports = class extends Generator {
 		this.fs.writeJSON(this.destinationPath('package.json'), packageFileJSON, null, 4);
 	}
 
-	_rewriteBuild() {
-
-		if (this.fs.exists(this.destinationPath('Dockerfile'))) {
-			let Dockerfile = this.fs.read(this.destinationPath('Dockerfile'));
-			if (Dockerfile.indexOf('webpack.config.js') < 0) {
-				Dockerfile = Dockerfile.replace('COPY package.json /app/\nRUN cd /app; npm install --production', 'COPY package.json webpack.config.js /app/\nRUN cd /app; npm install --production\nCOPY /client /app/client/\nRUN npm install --only=dev; npm run build; npm prune --production');
-			}
-
-			this.fs.write(this.destinationPath('Dockerfile'), Dockerfile);
-		}
-
-		if (this.fs.exists(this.destinationPath('manifest.yml'))) {
-			let manifest = this.fs.read(this.destinationPath('manifest.yml'));
-			if (manifest.indexOf('npm prune') < 0) {
-				manifest = manifest.replace('npm start', 'npm prune --production && NODE_ENV=production npm start');
-			}
-
-			if (manifest.indexOf('NPM_CONFIG_PRODUCTION' < 0)) {
-				let manifest_parsed = yamlParser.safeLoad(manifest);
-
-				if (manifest_parsed.applications && manifest_parsed.applications[0]) {
-					let env = manifest_parsed.applications[0].env || {};
-					env.NPM_CONFIG_PRODUCTION = false;
-					manifest_parsed.applications[0].env = env;
-					manifest = yamlParser.safeDump(manifest_parsed);
-				}
-			}
-
-			this.fs.write(this.destinationPath('manifest.yml'), manifest);
-		}
-	}
 
 };
