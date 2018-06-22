@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.6"></a>
+## [1.2.6](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.5...v1.2.6) (2018-06-22)
+
+
+### Bug Fixes
+
+* **react-angular:** use Procfile and npm-run to run client code along… ([#33](https://github.com/ibm-developer/generator-ibm-web/issues/33)) ([f94e917](https://github.com/ibm-developer/generator-ibm-web/commit/f94e917))
+
+
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.4...v1.2.5) (2018-05-15)
 
