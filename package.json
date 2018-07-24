@@ -1,6 +1,6 @@
 {
-  "name": "generator-ibm-web",
-  "version": "1.2.6",
+  "name": "generator-web-golang",
+  "version": "1.0.0",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
@@ -37,5 +37,5 @@
     "yeoman-assert": "^2.2.2",
     "yeoman-test": "^1.7.0"
   },
-  "repository": "https://github.com/ibm-developer/generator-ibm-web"
+  "repository": "https://github.com/mblume97/generator-web-golang"
 }

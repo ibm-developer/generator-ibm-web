@@ -29,7 +29,7 @@ module.exports = class extends Generator {
 		super(args, opts);
 
 		this.framework = opts.framework;
-		this.nodeVersion = opts.nodeVersion || defaultNodeVersion; 
+		this.nodeVersion = opts.nodeVersion || defaultNodeVersion;
 
 		if (typeof (opts.bluemix) === 'string') {
 			this.bluemix = JSON.parse(opts.bluemix || "{}");
@@ -42,7 +42,8 @@ module.exports = class extends Generator {
 			"SWIFT": "Swift",
 			"JAVA": "Java",
 			"PYTHON": "Python",
-			"DJANGO": "Django"
+			"DJANGO": "Django",
+			"GO": "Go"
 		};
 	}
 
@@ -79,7 +80,8 @@ module.exports = class extends Generator {
 					"NODE",
 					"JAVA",
 					"PYTHON",
-					"DJANGO"
+					"DJANGO",
+					"GO"
 				]
 			});
 
@@ -134,6 +136,13 @@ module.exports = class extends Generator {
 				this.destinationPath('public'), {}
 			);
 
+		}
+
+		else if (this.bluemix.backendPlatform === 'GO') {
+			this.fs.copyTpl(
+				this.templatePath('basic/go'),
+				this.destinationPath('public'), {}
+			);
 		}
 
 		else {

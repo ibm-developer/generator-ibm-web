@@ -128,6 +128,31 @@ describe('Web project generator', function () {
 		});
 
 	});
+	describe('Basic app with Go', function () {
+
+		beforeEach(function () {
+
+			bluemixSettings.backendPlatform = "GO";
+
+			return helpers.run(path.join(__dirname, '../generators/app'))
+				.inTmpDir()
+				.withOptions({
+					bluemix: JSON.stringify(bluemixSettings),
+					framework: "None"
+				});
+		});
+
+		it('contains web pages', function () {
+
+			assert.file(requiredFilesForBasic);
+
+		});
+
+		it('starter text appears', function () {
+			assert.fileContent('public/index.html', 'You are currently running a Go app built for the IBM Cloud')
+		});
+
+	});
 
 	describe('React app with NodeJS', function () {
 
@@ -297,7 +322,7 @@ describe('Web project generator', function () {
 		it('required files created', function () {
 			assert.file(requiredFilesForAngular);
 		});
-		
+
 		it('should have specific build script', function() {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
 		});
@@ -396,7 +421,7 @@ describe('Web project generator', function () {
 		it('should have react specific build script', function() {
 			assert.fileContent('package.json', 'webpack --progress --config webpack.prod.js');
 		});
-      
+
 		it('should have correct node scripts under dev and debug', function() {
 			assert.fileContent('package.json', '"dev": "npm-run-all --parallel client-reload-proxy server-reload"');
 			assert.fileContent('package.json', '"debug": "npm-run-all --parallel client-reload-proxy inspector"');
@@ -408,4 +433,3 @@ describe('Web project generator', function () {
 		})
 	});
 });
-
