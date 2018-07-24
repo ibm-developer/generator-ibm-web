@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.7"></a>
+## [1.2.7](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.6...v1.2.7) (2018-07-24)
+
+
+### Bug Fixes
+
+* fix typo in package.json ([bc70a87](https://github.com/ibm-developer/generator-ibm-web/commit/bc70a87))
+* package.json configuration ([0bd9bc0](https://github.com/ibm-developer/generator-ibm-web/commit/0bd9bc0))
+
+
+
 <a name="1.2.6"></a>
 ## [1.2.6](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.5...v1.2.6) (2018-06-22)
 
