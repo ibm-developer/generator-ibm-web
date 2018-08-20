@@ -37,7 +37,7 @@ describe('Testing Server', function() {
         });
 
         response.on('end', function () {
-          expect(responseString).to.include('You are currently running a NodeJS server.');
+          expect(responseString).to.include('You are currently running a Node.js app built for the IBM Cloud.');
           done();
         });
       };
