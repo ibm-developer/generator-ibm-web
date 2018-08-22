@@ -35,7 +35,7 @@
 ## Getting Started with a generated project
 
 1. Run the generator and choose the options:
-  `yo web`
+  `yo ibm-web`
 
 1. Select a web framework: None, Angular or React
 
@@ -46,7 +46,7 @@
 Frameworks are chosen using the `framework` option at the end of the generator. For example,
 
 ```
-yo web --framework {None, React, AngularJS}
+yo ibm-web --framework {None, React, AngularJS}
 ```
 
 ### Basic
