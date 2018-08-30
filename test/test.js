@@ -380,6 +380,8 @@ describe('Web project generator', function () {
 		it('should have original scripts and dependencies', function() {
 			assert.fileContent('package.json', 'mocha');
 			assert.fileContent('package.json', 'node --inspect=0.0.0.0:9229 server/server.js');
+			assert.fileContent('package.json', 'sample-app');
+			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
 		});
 	});
 
@@ -407,6 +409,7 @@ describe('Web project generator', function () {
 		});
 
 		it(`should use ${defaultNodeVersion} for engine node version`, function() {
+			assert.fileContent('package.json', 'MyTest');
 			assert.jsonFileContent('package.json', {engines: {node : defaultNodeVersion}});
 		});
 
