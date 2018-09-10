@@ -1,4 +1,4 @@
-# IBM Web Generator 
+# IBM Web Generator
 
 
 [![IBM Cloud powered][img-ibmcloud-powered]][url-cloud]
@@ -39,7 +39,7 @@
 
 1. Select a web framework: None, Angular or React
 
-1. Select a language: Swift, Node, Java, Python-Flask or Python-Django
+1. Select a language: Swift, Node, Java, Go, Python-Flask or Python-Django
 
 ## Frameworks
 
@@ -63,7 +63,7 @@ It is important that the web server is registered to serve files in the `public`
 
 - [react](https://facebook.github.io/react/) - to build user interfaces
 - [webpack](https://webpack.github.io/) - bundles your JS modules
-  - sass-loader 
+  - sass-loader
   - css-loader
   - style-loader
 
@@ -79,7 +79,7 @@ Web sources for React projects are stored in the `client` directory:
 
 Web sources for AngularJS projects are stored in the `client` directory:
 
-- `client/index.html` - Landing page source 
+- `client/index.html` - Landing page source
 - `client/component.html` - Landing page source
 - `client/app.js` - Angular app initialization, config and routing
 - `client/404.html` and `client/500.html` - Error page sources

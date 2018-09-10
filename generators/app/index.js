@@ -16,6 +16,7 @@ const Generator = require('yeoman-generator');
 const dep = require('./templates/dependencies.json');
 const reactDep = require('./templates/react/dependencies.json');
 const angularJsDep = require('./templates/angularjs/dependencies.json');
+const Handlebars = require('handlebars');
 
 const scripts = dep.scripts;
 const angularJsScripts = angularJsDep.scripts;
@@ -205,14 +206,11 @@ module.exports = class extends Generator {
 		);
 
 		if (!this.fs.exists(this.destinationPath('package.json'))) {
-			this.fs.copyTpl(
-				this.templatePath('package.json'),
-				this.destinationPath('package.json'), {
-					applicationName: this.bluemix.name,
-					language: this.bluemix.backendPlatform,
-					nodeVersion: this.nodeVersion
-				}
-			);
+			this._writeHandlebarsFile('package.json', 'package.json', {
+				applicationName: this.bluemix.name,
+				language: this.bluemix.backendPlatform,
+				nodeVersion: this.nodeVersion
+			});
 		}
 
 		this._augmentPackageJSON({ react: true });
@@ -253,14 +251,11 @@ module.exports = class extends Generator {
 		);
 
 		if (!this.fs.exists(this.destinationPath('package.json'))) {
-			this.fs.copyTpl(
-				this.templatePath('package.json'),
-				this.destinationPath('package.json'), {
-					applicationName: this.bluemix.name,
-					language: this.bluemix.backendPlatform,
-					nodeVersion: this.nodeVersion
-				}
-			);
+			this._writeHandlebarsFile('package.json', 'package.json', {
+				applicationName: this.bluemix.name,
+				language: this.bluemix.backendPlatform,
+				nodeVersion: this.nodeVersion
+			});
 		}
 
 		this._augmentPackageJSON({ angularjs: true });
@@ -322,6 +317,13 @@ module.exports = class extends Generator {
 		}
 
 		this.fs.writeJSON(this.destinationPath('package.json'), packageFileJSON, null, 4);
+	}
+
+	_writeHandlebarsFile(templateFile, destinationFile, data) {
+		let template = this.fs.read(this.templatePath(templateFile));
+		let compiledTemplate = Handlebars.compile(template);
+		let output = compiledTemplate(data);
+		this.fs.write(this.destinationPath(destinationFile), output);
 	}
 
 
