@@ -1,4 +1,4 @@
-<testsuite name="Mocha Tests" tests="39" failures="0" errors="0" skipped="0" timestamp="2018-08-30T21:28:22" time="1.501">
+<testsuite name="Mocha Tests" tests="39" failures="0" errors="0" skipped="0" timestamp="2018-09-10T16:27:07" time="1.357">
 <testcase classname="Web project generator Basic app with NodeJS" name="contains web pages" time="0"/>
 <testcase classname="Web project generator Basic app with NodeJS" name="starter text appears" time="0"/>
 <testcase classname="Web project generator Basic app with Python" name="contains web pages" time="0"/>
@@ -10,26 +10,26 @@
 <testcase classname="Web project generator React app with NodeJS" name="contains original dependencies" time="0"/>
 <testcase classname="Web project generator React app with NodeJS" name="contains Webpack" time="0"/>
 <testcase classname="Web project generator React app with NodeJS" name="should use ^8.11.0 for engine node version" time="0.001"/>
-<testcase classname="Web project generator React app with NodeJS" name="contains React" time="0"/>
+<testcase classname="Web project generator React app with NodeJS" name="contains React" time="0.001"/>
 <testcase classname="Web project generator React app with NodeJS" name="required files created" time="0"/>
-<testcase classname="Web project generator React app with NodeJS" name="should have the correct run scripts to debug and dev" time="0.001"/>
-<testcase classname="Web project generator React app with NodeJS" name="contains original dependencies" time="0.001"/>
+<testcase classname="Web project generator React app with NodeJS" name="should have the correct run scripts to debug and dev" time="0"/>
+<testcase classname="Web project generator React app with NodeJS" name="contains original dependencies" time="0"/>
 <testcase classname="Web project generator React app with NodeJS" name="contains Webpack" time="0"/>
 <testcase classname="Web project generator React app with NodeJS" name="should use ^8.11.0 for engine node version" time="0"/>
-<testcase classname="Web project generator React app with NodeJS" name="contains React" time="0"/>
+<testcase classname="Web project generator React app with NodeJS" name="contains React" time="0.001"/>
 <testcase classname="Web project generator React app with NodeJS using a defined node version" name="required files created" time="0"/>
-<testcase classname="Web project generator React app with NodeJS using a defined node version" name="contains Webpack" time="0"/>
+<testcase classname="Web project generator React app with NodeJS using a defined node version" name="contains Webpack" time="0.001"/>
 <testcase classname="Web project generator React app with NodeJS using a defined node version" name="contains React" time="0"/>
-<testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="required files created" time="0.001"/>
+<testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="required files created" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="should have specific build script" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="should have correct node scripts under dev and debug" time="0"/>
-<testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="should have original scripts and dependencies" time="0.001"/>
+<testcase classname="Web project generator AngularJS app with NodeJS using a defined node version and present existing files " name="should have original scripts and dependencies" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="required files created" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="contains original dependencies" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="should have react specific build script" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="should have correct node scripts under dev and debug" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="should use ^8.11.0 for engine node version" time="0"/>
-<testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="should have original scripts and dependencies" time="0.001"/>
+<testcase classname="Web project generator AngularJS app with NodeJS and present existing files " name="should have original scripts and dependencies" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS with empty user directory" name="required files created" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS with empty user directory" name="contains original dependencies" time="0"/>
 <testcase classname="Web project generator AngularJS app with NodeJS with empty user directory" name="should use ^8.11.0 for engine node version" time="0"/>

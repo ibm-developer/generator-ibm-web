@@ -12,9 +12,9 @@
   ],
   "dependencies": {
     "lint": "^1.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "yaml-parser": "^3.5.3",
-    "yeoman-generator": "^1.1.0"
+    "yeoman-generator": "^3.1.1"
   },
   "scripts": {
     "test": "npm run lint && npm run mocha",
@@ -24,18 +24,18 @@
     "version": "standard-version"
   },
   "devDependencies": {
-    "coveralls": "^2.13.3",
+    "coveralls": "^3.0.2",
     "eslint": "^3.1.1",
     "eslint-plugin-ejs": "^0.0.2",
     "fs-extra": "^2.1.2",
-    "jshint": "^2.9.4",
-    "mocha": "^3.2.0",
+    "jshint": "^2.9.6",
+    "mocha": "^5.2.0",
     "mocha-multi-reporters": "^1.1.7",
-    "nyc": "^10.3.0",
-    "standard-version": "^4.2.0",
+    "nyc": "^13.1.0",
+    "standard-version": "^4.4.0",
     "xunit-file": "^1.0.0",
     "yeoman-assert": "^2.2.2",
-    "yeoman-test": "^1.7.0"
+    "yeoman-test": "^2.0.0"
   },
   "repository": "https://github.com/ibm-developer/generator-ibm-web"
 }
