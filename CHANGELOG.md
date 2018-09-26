@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.2"></a>
+## [1.4.2](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.1...v1.4.2) (2018-09-26)
+
+
+### Bug Fixes
+
+* update webpack-cli ([b7c17c0](https://github.com/ibm-developer/generator-ibm-web/commit/b7c17c0))
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.0...v1.4.1) (2018-09-14)
 
