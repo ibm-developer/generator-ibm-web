@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.3"></a>
+## [1.4.3](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.2...v1.4.3) (2018-10-26)
+
+
+### Bug Fixes
+
+* **test:** Use callback instead of timeout for server test ([763f37d](https://github.com/ibm-developer/generator-ibm-web/commit/763f37d))
+
+
+
 <a name="1.4.2"></a>
 ## [1.4.2](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.1...v1.4.2) (2018-09-26)
 
