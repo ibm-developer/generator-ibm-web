@@ -163,16 +163,14 @@ module.exports = class extends Generator {
 					}
 				);
 			}
-			else {
-				this.fs.copyTpl(
-					this.templatePath('basic/python/404.html'),
-					this.destinationPath('public/404.html'), {}
-				);
-				this.fs.copyTpl(
-					this.templatePath('basic/python/500.html'),
-					this.destinationPath('public/500.html'), {}
-				);
-			}
+			this.fs.copyTpl(
+				this.templatePath('basic/python/404.html'),
+				this.destinationPath('public/404.html'), {}
+			);
+			this.fs.copyTpl(
+				this.templatePath('basic/python/500.html'),
+				this.destinationPath('public/500.html'), {}
+			);
 		}
 
 	}
