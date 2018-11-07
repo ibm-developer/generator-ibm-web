@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.3"></a>
+## [1.4.3](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.2...v1.4.3) (2018-10-26)
+
+
+### Bug Fixes
+
+* **test:** Use callback instead of timeout for server test ([763f37d](https://github.com/ibm-developer/generator-ibm-web/commit/763f37d))
+
+
+
+<a name="1.4.2"></a>
+## [1.4.2](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.1...v1.4.2) (2018-09-26)
+
+
+### Bug Fixes
+
+* update webpack-cli ([b7c17c0](https://github.com/ibm-developer/generator-ibm-web/commit/b7c17c0))
+
+
+
+<a name="1.4.1"></a>
+## [1.4.1](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.0...v1.4.1) (2018-09-14)
+
+
+### Bug Fixes
+
+* getting rid of ejs tags ([413c11c](https://github.com/ibm-developer/generator-ibm-web/commit/413c11c))
+* update unit test for landing page ([3d5e97b](https://github.com/ibm-developer/generator-ibm-web/commit/3d5e97b))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/ibm-developer/generator-ibm-web/compare/v1.2.6...v1.4.0) (2018-08-20)
 
