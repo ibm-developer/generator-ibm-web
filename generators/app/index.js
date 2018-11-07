@@ -139,11 +139,23 @@ module.exports = class extends Generator {
 				this.destinationPath('test/test-server.js'), {}
 			);
 
+			if (this.opts.appType !== 'MS' || this.opts.appType !== 'BLANK') {
+				this.fs.copyTpl(
+					this.templatePath('basic/node/index.html'),
+					this.destinationPath('public/index.html'), {
+						applicationName: this.bluemix.name,
+						language: this.humanNameLanguage[this.bluemix.backendPlatform]
+					}
+				);
+			}
 			this.fs.copyTpl(
-				this.templatePath('basic/node'),
-				this.destinationPath('public'), {}
+				this.templatePath('basic/node/404.html'),
+				this.destinationPath('public/404.html'), {}
 			);
-
+			this.fs.copyTpl(
+				this.templatePath('basic/node/500.html'),
+				this.destinationPath('public/500.html'), {}
+			);
 		}
 
 		else if (this.bluemix.backendPlatform === 'GO') {
