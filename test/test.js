@@ -113,7 +113,8 @@ describe('Web project generator', function () {
 				.inTmpDir()
 				.withOptions({
 					bluemix: JSON.stringify(bluemixSettings),
-					framework: "None"
+					framework: "None",
+					appType: "WEB"
 				});
 		});
 

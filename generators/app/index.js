@@ -38,6 +38,13 @@ module.exports = class extends Generator {
 			this.bluemix = opts.bluemix;
 		}
 
+		if (opts.cloudContext) {
+			this.opts = opts.cloudContext
+			this.opts.libertyVersion = opts.libertyVersion
+		} else {
+			this.opts = opts
+		}
+
 		this.humanNameLanguage = {
 			"NODE": "NodeJS",
 			"SWIFT": "Swift",
@@ -133,10 +140,20 @@ module.exports = class extends Generator {
 			);
 
 			this.fs.copyTpl(
-				this.templatePath('basic/node'),
-				this.destinationPath('public'), {}
+				this.templatePath('basic/node/index.html'),
+				this.destinationPath('public/index.html'), {
+					applicationName: this.bluemix.name,
+					language: this.humanNameLanguage[this.bluemix.backendPlatform]
+				}
 			);
-
+			this.fs.copyTpl(
+				this.templatePath('basic/node/404.html'),
+				this.destinationPath('public/404.html'), {}
+			);
+			this.fs.copyTpl(
+				this.templatePath('basic/node/500.html'),
+				this.destinationPath('public/500.html'), {}
+			);
 		}
 
 		else if (this.bluemix.backendPlatform === 'GO') {
