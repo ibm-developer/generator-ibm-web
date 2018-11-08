@@ -139,15 +139,13 @@ module.exports = class extends Generator {
 				this.destinationPath('test/test-server.js'), {}
 			);
 
-			if (this.opts.appType !== 'MS' || this.opts.appType !== 'BLANK') {
-				this.fs.copyTpl(
-					this.templatePath('basic/node/index.html'),
-					this.destinationPath('public/index.html'), {
-						applicationName: this.bluemix.name,
-						language: this.humanNameLanguage[this.bluemix.backendPlatform]
-					}
-				);
-			}
+			this.fs.copyTpl(
+				this.templatePath('basic/node/index.html'),
+				this.destinationPath('public/index.html'), {
+					applicationName: this.bluemix.name,
+					language: this.humanNameLanguage[this.bluemix.backendPlatform]
+				}
+			);
 			this.fs.copyTpl(
 				this.templatePath('basic/node/404.html'),
 				this.destinationPath('public/404.html'), {}
@@ -166,15 +164,13 @@ module.exports = class extends Generator {
 		}
 
 		else {
-			if (this.opts.appType === 'WEB') {
-				this.fs.copyTpl(
-					this.templatePath('basic/python/index.html'),
-					this.destinationPath('public/index.html'), {
-						applicationName: this.bluemix.name,
-						language: this.humanNameLanguage[this.bluemix.backendPlatform]
-					}
-				);
-			}
+			this.fs.copyTpl(
+				this.templatePath('basic/python/index.html'),
+				this.destinationPath('public/index.html'), {
+					applicationName: this.bluemix.name,
+					language: this.humanNameLanguage[this.bluemix.backendPlatform]
+				}
+			);
 			this.fs.copyTpl(
 				this.templatePath('basic/python/404.html'),
 				this.destinationPath('public/404.html'), {}
