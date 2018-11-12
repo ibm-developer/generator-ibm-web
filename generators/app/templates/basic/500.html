@@ -14,7 +14,14 @@
             <h2>Whoops! The server couldn't handle your request.</h2>
             {{#ifCond language '===' 'Node.js'}}
             <h2>Click to go to the <a href="https://developer.ibm.com/node/" target="_blank">overview page</a>.</h2>
-            {{else}}
+            {{/ifCond}}
+            {{#ifCond language '===' 'Swift'}}
+            <h2>Click to go to the <a href="https://developer.ibm.com/swift/" target="_blank">overview page</a>.</h2>
+            {{/ifCond}}
+            {{#ifCond language '===' 'Python'}}
+            <h2>Click to go to the <a href="https://www.ibm.com/cloud/" target="_blank">IBM Cloud page</a>.</h2>
+            {{/ifCond}}
+            {{#ifCond language '===' 'Go'}}
             <h2>Click to go to the <a href="https://www.ibm.com/cloud/" target="_blank">IBM Cloud page</a>.</h2>
             {{/ifCond}}
         </div>
