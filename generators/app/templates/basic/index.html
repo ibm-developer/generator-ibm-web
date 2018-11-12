@@ -50,7 +50,36 @@
                 <a target="_blank" rel="noopener" href="https://developer.ibm.com/node/blogs">Subscribe to our blog</a>
             </div>
         </li>
-        {{else}}
+        {{/ifCond}}
+        {{#ifCond language '===' 'Swift'}}
+        <li>
+            <div class="right-arrow"></div>
+            <div>
+                <a target="_blank" href="https://developer.ibm.com/swift">Visit the Swift Developer Center</a>
+            </div>
+        </li>
+        <li>
+            <div class="right-arrow"></div>
+            <div>
+                <a target="_blank" href="https://developer.ibm.com/swift/guides/">Checkout tutorials for Swift</a>
+            </div>
+        </li>
+        <li>
+            <div class="right-arrow"></div>
+            <div>
+                <a target="_blank" href="http://www.kitura.io/">Visit Kitura.io</a>
+            </div>
+        </li>
+        {{/ifCond}}
+        {{#ifCond language '===' 'Python'}}
+        <li>
+            <div class="right-arrow"></div>
+            <div>
+                <a target="_blank" rel="noopener" href="https://datascience.ibm.com/">Train a model with IBM Watson Studio</a>
+            </div>
+        </li>
+        {{/ifCond}}
+        {{#ifCond language '===' 'Go'}}
         <li>
             <div class="right-arrow"></div>
             <div>
