@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.4"></a>
+## [1.4.4](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.3...v1.4.4) (2018-11-14)
+
+
+### Bug Fixes
+
+* added swift support to generator for landing pages ([0c19f69](https://github.com/ibm-developer/generator-ibm-web/commit/0c19f69))
+* adding 404 and 500 pages to python microservice and blank starters ([9d201a2](https://github.com/ibm-developer/generator-ibm-web/commit/9d201a2))
+* adding back index.html for node and python starters with backend focus ([92a3822](https://github.com/ibm-developer/generator-ibm-web/commit/92a3822))
+* bff, microservice, and blank starters don't have index.html ([70cb8ac](https://github.com/ibm-developer/generator-ibm-web/commit/70cb8ac))
+* fixed tests ([cd8ddf1](https://github.com/ibm-developer/generator-ibm-web/commit/cd8ddf1))
+* refactored generator so all languages will draw from same template files for landing pages ([cdfaf1f](https://github.com/ibm-developer/generator-ibm-web/commit/cdfaf1f))
+
+
+
 <a name="1.4.3"></a>
 ## [1.4.3](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.2...v1.4.3) (2018-10-26)
 

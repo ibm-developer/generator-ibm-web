@@ -16,7 +16,7 @@ const Generator = require('yeoman-generator');
 const dep = require('./templates/dependencies.json');
 const reactDep = require('./templates/react/dependencies.json');
 const angularJsDep = require('./templates/angularjs/dependencies.json');
-const Handlebars = require('handlebars');
+const Handlebars = require('../../lib/handlebars.js');
 
 const scripts = dep.scripts;
 const angularJsScripts = angularJsDep.scripts;
@@ -38,8 +38,15 @@ module.exports = class extends Generator {
 			this.bluemix = opts.bluemix;
 		}
 
+		if (opts.cloudContext) {
+			this.opts = opts.cloudContext
+			this.opts.libertyVersion = opts.libertyVersion
+		} else {
+			this.opts = opts
+		}
+
 		this.humanNameLanguage = {
-			"NODE": "NodeJS",
+			"NODE": "Node.js",
 			"SWIFT": "Swift",
 			"JAVA": "Java",
 			"PYTHON": "Python",
@@ -126,43 +133,22 @@ module.exports = class extends Generator {
 	_generateBasic() {
 
 		// Replace server test with Web specific test.
-		if (this.bluemix.backendPlatform === 'NODE') {
-			this.fs.copyTpl(
-				this.templatePath('basic/test-server.js'),
-				this.destinationPath('test/test-server.js'), {}
-			);
-
-			this.fs.copyTpl(
-				this.templatePath('basic/node'),
-				this.destinationPath('public'), {}
-			);
-
-		}
-
-		else if (this.bluemix.backendPlatform === 'GO') {
-			this.fs.copyTpl(
-				this.templatePath('basic/go'),
-				this.destinationPath('public'), {}
-			);
-		}
-
-		else {
-			this.fs.copyTpl(
-				this.templatePath('basic/python/index.html'),
-				this.destinationPath('public/index.html'), {
-					applicationName: this.bluemix.name,
-					language: this.humanNameLanguage[this.bluemix.backendPlatform]
-				}
-			);
-			this.fs.copyTpl(
-				this.templatePath('basic/python/404.html'),
-				this.destinationPath('public/404.html'), {}
-			);
-			this.fs.copyTpl(
-				this.templatePath('basic/python/500.html'),
-				this.destinationPath('public/500.html'), {}
-			);
-		}
+		this.fs.copyTpl(
+			this.templatePath('basic/test-server.js'),
+			this.destinationPath('test/test-server.js'), {}
+		);
+		this._writeHandlebarsFile('basic/index.html', 'public/index.html', {
+			applicationName: this.bluemix.name,
+			language: this.humanNameLanguage[this.bluemix.backendPlatform]
+		});
+		this._writeHandlebarsFile('basic/404.html', 'public/404.html', {
+			applicationName: this.bluemix.name,
+			language: this.humanNameLanguage[this.bluemix.backendPlatform]
+		});
+		this._writeHandlebarsFile('basic/500.html', 'public/500.html', {
+			applicationName: this.bluemix.name,
+			language: this.humanNameLanguage[this.bluemix.backendPlatform]
+		});
 
 	}
 
