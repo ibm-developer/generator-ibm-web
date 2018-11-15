@@ -1,11 +1,12 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
   "files": [
-    "generators"
+    "generators",
+    "lib"
   ],
   "keywords": [
     "yeoman-generator"
