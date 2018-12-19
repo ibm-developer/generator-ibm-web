@@ -103,6 +103,33 @@ describe('Web project generator', function () {
 		});
 
 	});
+
+	describe('Basic app with Swift', function () {
+
+		beforeEach(function () {
+
+			bluemixSettings.backendPlatform = "SWIFT";
+
+			return helpers.run(path.join(__dirname, '../generators/app'))
+				.inTmpDir()
+				.withOptions({
+					bluemix: JSON.stringify(bluemixSettings),
+					framework: "None"
+				});
+		});
+
+		it('contains web pages', function () {
+
+			assert.file(requiredFilesForBasic);
+
+		});
+
+		it('starter text appears', function () {
+			assert.fileContent('public/index.html', 'You are currently running a Swift app built for the IBM Cloud')
+		});
+
+	});
+
 	describe('Basic app with Python', function () {
 
 		beforeEach(function () {
