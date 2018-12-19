@@ -133,10 +133,12 @@ module.exports = class extends Generator {
 	_generateBasic() {
 
 		// Replace server test with Web specific test.
-		this.fs.copyTpl(
-			this.templatePath('basic/test-server.js'),
-			this.destinationPath('test/test-server.js'), {}
-		);
+		if (this.bluemix.backendPlatform === 'NODE') {
+			this.fs.copyTpl(
+				this.templatePath('basic/test-server.js'),
+				this.destinationPath('test/test-server.js'), {}
+			);
+		}
 		this._writeHandlebarsFile('basic/index.html', 'public/index.html', {
 			applicationName: this.bluemix.name,
 			language: this.humanNameLanguage[this.bluemix.backendPlatform]
