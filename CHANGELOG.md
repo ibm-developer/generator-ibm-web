@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.6"></a>
+## [1.4.6](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.5...v1.4.6) (2018-12-19)
+
+
+### Bug Fixes
+
+* test-server.js only for Node ([18d387d](https://github.com/ibm-developer/generator-ibm-web/commit/18d387d))
+
+
+
 <a name="1.4.5"></a>
 ## [1.4.5](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.4...v1.4.5) (2018-11-15)
 
