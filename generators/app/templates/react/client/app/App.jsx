@@ -14,7 +14,7 @@ export default class App extends React.Component {
                         <li>
                             <div class="right-arrow"></div>
                             <div>
-                                <a target="_blank" href="https://console.bluemix.net/developer/appservice/dashboard?env_id=ibm%3Ayp%3Aus-south">Visit IBM Cloud App Service</a>
+                                <a target="_blank" href="https://cloud.ibm.com/developer/appservice/dashboard?env_id=ibm%3Ayp%3Aus-south">Visit IBM Cloud App Service</a>
                             </div>
                         </li>
                         <li>

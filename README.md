@@ -12,7 +12,7 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 [img-ibmcloud-powered]: https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg
-[url-cloud]: http://bluemix.net
+[url-cloud]: http://cloud.ibm.com
 
 [url-npm]: https://www.npmjs.com/package/generator-ibm-web
 [img-license]: https://img.shields.io/npm/l/generator-ibm-web.svg
