@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.9"></a>
+## [1.4.9](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.8...v1.4.9) (2019-01-25)
+
+
+### Bug Fixes
+
+* backup uglify version ([0ad04f5](https://github.com/ibm-developer/generator-ibm-web/commit/0ad04f5))
+
+
+
 <a name="1.4.8"></a>
 ## [1.4.8](https://github.com/ibm-developer/generator-ibm-web/compare/v1.4.7...v1.4.8) (2019-01-08)
 
