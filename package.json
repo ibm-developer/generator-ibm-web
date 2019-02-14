@@ -1,6 +1,6 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
@@ -15,7 +15,8 @@
     "lint": "^1.1.2",
     "lodash": "^4.17.10",
     "yaml-parser": "^3.5.3",
-    "yeoman-generator": "^3.1.1"
+    "yeoman-generator": "^3.1.1",
+    "handlebars": "^4.0.11"
   },
   "scripts": {
     "test": "npm run lint && npm run mocha",
