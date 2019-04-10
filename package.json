@@ -12,11 +12,11 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "handlebars": "^4.1.1",
     "lint": "^1.1.2",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "yaml-parser": "^3.5.3",
-    "yeoman-generator": "^3.1.1",
-    "handlebars": "^4.0.11"
+    "yeoman-generator": "^3.2.0"
   },
   "scripts": {
     "test": "npm run lint && npm run mocha",
@@ -33,7 +33,7 @@
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",
     "mocha-multi-reporters": "^1.1.7",
-    "nyc": "^13.1.0",
+    "nyc": "^13.3.0",
     "standard-version": "^4.4.0",
     "xunit-file": "^1.0.0",
     "yeoman-assert": "^2.2.2",
