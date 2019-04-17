@@ -4,6 +4,7 @@ node_modules
 .idea/**/*
 test/tmp
 .nyc_output
+xunit.xml
 coverage/
 .vscode/
 *.lock
