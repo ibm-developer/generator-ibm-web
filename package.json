@@ -15,7 +15,6 @@
     "handlebars": "^4.1.1",
     "lint": "^1.1.2",
     "lodash": "^4.17.11",
-    "yaml-parser": "^3.5.3",
     "yeoman-generator": "^3.2.0"
   },
   "scripts": {
