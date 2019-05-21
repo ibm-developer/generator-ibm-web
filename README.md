@@ -97,3 +97,4 @@ Once you are finished with your changes, run `npm test` to make sure all tests p
 
 Do a pull request against `master`, make sure the build passes. A team member will review and merge your pull request.
 Once merged to `master` an auto generated pull request will be created against master to update the changelog. Make sure that the CHANGELOG.md and the package.json is correct before merging the pull request. After the auto generated pull request has been merged to `master` the version will be bumped and published to npm.
+ 
