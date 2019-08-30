@@ -1,6 +1,6 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
@@ -12,16 +12,16 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "handlebars": "^4.1.2",
     "lint": "^1.1.2",
-    "lodash": "^4.17.10",
-    "yaml-parser": "^3.5.3",
-    "yeoman-generator": "^3.1.1",
-    "handlebars": "^4.0.11"
+    "lodash": "^4.17.11",
+    "yeoman-generator": "^3.2.0"
   },
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "lint": "eslint .",
     "mocha": "nyc --reporter=lcov mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json",
+    "testinsights": "npm run mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "version": "standard-version"
   },
@@ -33,7 +33,7 @@
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",
     "mocha-multi-reporters": "^1.1.7",
-    "nyc": "^13.1.0",
+    "nyc": "^13.3.0",
     "standard-version": "^4.4.0",
     "xunit-file": "^1.0.0",
     "yeoman-assert": "^2.2.2",
