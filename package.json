@@ -1,6 +1,6 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.11",
+  "version": "1.4.12",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
@@ -33,7 +33,7 @@
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",
     "mocha-multi-reporters": "^1.1.7",
-    "nyc": "^13.3.0",
+    "nyc": "^14.1.1",
     "standard-version": "^4.4.0",
     "xunit-file": "^1.0.0",
     "yeoman-assert": "^2.2.2",
