@@ -1,6 +1,6 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
