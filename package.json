@@ -1,6 +1,6 @@
 {
   "name": "generator-ibm-web",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "description": "Web Content Generator, supporting basic, webpack and react",
   "license": "Apache-2.0",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.4.3",
     "lint": "^1.1.2",
     "lodash": "^4.17.11",
     "yeoman-generator": "^3.2.0"
